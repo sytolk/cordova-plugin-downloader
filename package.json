@@ -1,0 +1,37 @@
+{
+  "name": "bamboo.cordova.plugin.downloader",
+  "version": "1.0.0",
+  "description": "Cordova plugin for downloading files from server",
+  "cordova": {
+    "id": "com.whebcraft.cordova.plugin.downloader",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edushare/cordova-plugin-downloader.git"
+  },
+  "keywords": [
+    "plugin",
+    "download",
+    "mobile",
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "bamboo",
+  "license": "Apache 2.0 License",
+  "bugs": {
+    "url": "https://github.com/edushare/cordova-plugin-downloader/issues"
+  },
+  "homepage": "https://github.com/edushare/cordova-plugin-downloader#readme"
+}
