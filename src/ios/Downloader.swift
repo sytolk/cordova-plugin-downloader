@@ -5,14 +5,14 @@ import Foundation
         var pluginResult = CDVPluginResult(
             status: CDVCommandStatus_ERROR
         )
-        
+
         var isError = false
 
         let args = command.arguments[0] as! NSDictionary
         let url = URL(string: args["url"] as! String)
         let targetFile = args["path"] as! String
 
-        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL!
+        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL?
         let destinationUrl = documentsUrl?.appendingPathComponent(targetFile)
 
         if FileManager().fileExists(atPath: destinationUrl!.path) {
@@ -25,12 +25,12 @@ import Foundation
                     status: CDVCommandStatus_ERROR,
                     messageAs: error.localizedDescription
                 )
-                
+
                 self.commandDelegate!.send(
                     pluginResult,
                     callbackId: command.callbackId
                 )
-                
+
                 isError = true
             }
         }
@@ -48,7 +48,7 @@ import Foundation
                                     status: CDVCommandStatus_OK,
                                     messageAs: documentsUrl?.path
                                 )
-                                
+
                                 self.commandDelegate!.send(
                                     pluginResult,
                                     callbackId: command.callbackId
