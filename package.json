@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edushare/cordova-plugin-downloader.git"
+    "url": "git+https://github.com/sytolk/cordova-plugin-downloader.git"
   },
   "keywords": [
     "plugin",
